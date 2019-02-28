@@ -6,5 +6,19 @@ c. Assign twice the sum of a and b to c.
 d. Assign a plus twice b to c.
 
 # Solution
+a.
+    
+    x += 10
 
+b. 
+
+    x += 1
+    
+c.
+    
+    c = a + b
+    
+d.
+    
+    c = a + 2 * b
 
