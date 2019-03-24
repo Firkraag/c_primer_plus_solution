@@ -35,7 +35,7 @@ void Temperatures(double Fahrenheit) {
     double Celsius = Fahrenheit2Celsius(Fahrenheit);
     double Kelvin = Celsius2Kelvin(Celsius);
 
-    printf("Fahrenheit temperature is %.2lf, Celsius temperature is %.2lf, Kelvin temperature is %.2lf\n", Fahrenheit, Celsius, Kelvin);
+    printf("Fahrenheit temperature is %.2f, Celsius temperature is %.2f, Kelvin temperature is %.2f\n", Fahrenheit, Celsius, Kelvin);
 }
 
 double Fahrenheit2Celsius(double Fahrenheit) {

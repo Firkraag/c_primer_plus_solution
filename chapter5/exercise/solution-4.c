@@ -26,7 +26,7 @@ int main(void) {
     while (height > 0) {
         int feet =  height / CENTIMETERS_PER_FOOT;
         double inches = (height - feet * CENTIMETERS_PER_FOOT) / CENTIMETERS_PER_INCH;
-        printf("%lf cm = %d feet, %.1lf inches\n", height, feet, inches); 
+        printf("%f cm = %d feet, %.1f inches\n", height, feet, inches); 
         printf("Enter a height in centimeters (<=0 to quit): ");
         scanf("%lf", &height);
     }

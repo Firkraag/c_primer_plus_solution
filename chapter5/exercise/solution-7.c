@@ -13,7 +13,7 @@ int main(void) {
     double cube(double), number;
 
     scanf("%lf", &number);
-    printf("The cube of %lf is %lf\n", number, cube(number));
+    printf("The cube of %f is %f\n", number, cube(number));
 
     return 0;
 }
