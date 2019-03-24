@@ -30,9 +30,11 @@ int main(void) {
     printf("Now enter the seconds.\n");
     scanf("%d", &sec);
     time = S_PER_M * min + sec;
+    printf("time is %d\n", time);
     distm = M_PER_K * distk;
     rate = distm / time * S_PER_H;
     mtime = (double) time / distm;
+    printf("mtime is %f\n", mtime);
     mmin = (int) mtime / S_PER_M;
     msec = (int) mtime % S_PER_M;
 

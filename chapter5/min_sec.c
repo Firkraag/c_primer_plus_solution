@@ -6,6 +6,7 @@
  ************************************************************************/
 
 #include <stdio.h>
+
 #define SEC_PER_MIN 60
 
 /* converts seconds to minutes */
@@ -15,8 +16,7 @@ int main(void) {
     printf("Convert seconds to minutes!\n");
     printf("Enter the number of seconds (<= 0 to quit):\n");
     scanf("%d", &sec);
-    while (sec > 0)
-    {
+    while (sec > 0) {
         min = sec / SEC_PER_MIN;
         left = sec % SEC_PER_MIN;
         printf("%d seconds is %d minutes, %d seconds.\n", sec, min, left);
