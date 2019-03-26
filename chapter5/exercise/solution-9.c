@@ -17,14 +17,10 @@ a loop to allow the user to enter temperatures repeatedly, stopping when a q or 
 int main(void) {
     double Fahrenheit; 
     void Temperatures(double Fahrenheit);
-    int read_number;
-    printf("Please enter a Fahrenheit temperature: ");
-    read_number = scanf("%lf", &Fahrenheit);
     
-    while (read_number == 1) {
+    ;
+    while (printf("Please enter a Fahrenheit temperature: "),scanf("%lf", &Fahrenheit) == 1) {
         Temperatures(Fahrenheit);
-        printf("Please enter a Fahrenheit temperature: ");
-        read_number = scanf("%lf", &Fahrenheit);
     }
 
     return 0;

@@ -15,14 +15,12 @@ int main(void) {
     int number_of_days;
     const int DAYS_PER_WEEK = 7;
 
-    printf("Please enter the number of days:\n");
-    scanf("%d", &number_of_days);
+    
+    
 
-    while (number_of_days > 0)
+    while (printf("Please enter the number of days:\n"),scanf("%d", &number_of_days) > 0)
     {
         printf("%d days are %d weeks, %d days.\n", number_of_days, number_of_days / DAYS_PER_WEEK, number_of_days % DAYS_PER_WEEK);
-        printf("Please enter the number of days:\n");
-        scanf("%d", &number_of_days);
     }
     printf("Done!\n");
 
