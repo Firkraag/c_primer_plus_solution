@@ -32,11 +32,11 @@ int main(void) {
         prev_value = second_array[i];
     }
     for (int i = 0; i < ARRAY_SIZE; i++) {
-        printf("%f\t", first_array[i]);
+        printf("%10.6f\t", first_array[i]);
     }
     printf("\n");
     for (int i = 0; i < ARRAY_SIZE; i++) {
-        printf("%f\t", second_array[i]);
+        printf("%10.6f\t", second_array[i]);
     }
     printf("\n");
 }   
