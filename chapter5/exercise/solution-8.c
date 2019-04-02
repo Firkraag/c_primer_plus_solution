@@ -25,13 +25,11 @@ int main(void) {
     printf("Now enter the first operand: ");
     scanf("%d", &first);
     printf("%d %% %d is %d\n", first, second, first % second);
-    printf("Enter next number for first operand (<= 0 to quit): ");
-    scanf("%d", &first);
-    while (first > 0)
+    
+    
+    while (printf("Enter next number for first operand (<= 0 to quit): "),scanf("%d", &first),first > 0)
     {
         printf("%d %% %d is %d\n", first, second, first % second);
-        printf("Enter next number for first operand (<= 0 to quit): ");
-        scanf("%d", &first);
     }
     printf("Done\n");
 }
