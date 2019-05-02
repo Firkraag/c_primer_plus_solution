@@ -21,24 +21,15 @@ int main(void) {
             case '.':
                 printf("!");  
                 num_substitution++;
+                break;
             case '!':
                 printf("!!"); 
                 num_substitution++;
+                break;
             default:
+                printf("%c", ch); 
+                break;
         }; 
-        if (ch == '.' )
-        {
-           printf("!");  
-           num_substitution++;
-        } 
-        else if (ch == '!') {
-            printf("!!"); 
-            num_substitution++;
-        }
-        else {
-            printf("%c", ch); 
-        }
     } 
     printf("\nthe number of substitutions is %d\n", num_substitution); 
-
 }
