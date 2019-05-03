@@ -34,7 +34,10 @@ int main(void) {
     int status, choice;
     while (1)
     {
-        printf("Enter the number corresponding to the desired pay rate or action: \n");
+printf("Enter the number corresponding to the desired pay rate or action: \n"
+"1) $8.75/hr 2) $9.33/hr\n"
+"3) $10.00/hr 4) $11.20/hr\n"
+"5) quit \n");
         status = scanf("%d", &choice);
         if ((status != 1) or (choice < 1) or (choice > 5))
         {
@@ -61,6 +64,7 @@ int main(void) {
         }
 
         overtime_pay_rate = basic_pay_rate * 1.5;
+        printf("Please enter work hour\n"); 
         scanf("%d", &work_hour);
         if (work_hour <= BASIC_WORK_HOURS_PER_WEEK) {
             gross_pay = basic_pay_rate * work_hour ;
