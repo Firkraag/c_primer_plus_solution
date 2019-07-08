@@ -1,0 +1,19 @@
+# Problem
+Create an appropriate declaration for each of the following variables:
+
+a. digits is an array of 10 ints.
+b. rates is an array of six floats.
+c. mat is an array of three arrays of five integers.
+d. psa is an array of 20 pointers to char.
+e. pstr is a pointer to an array of 20 chars.
+
+# Solution
+a. `int digits[10];`
+
+b. `float rates[6];`
+
+c. `int mat[3][5];`
+
+d. `char *psa[20];`
+
+e. `char *pstr[20];`
