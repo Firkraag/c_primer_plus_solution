@@ -15,4 +15,11 @@ ptr = fort[0];
 ```
 # Solution
 a.
-```
+the value of `*ptr` is 12
+
+the value of `*(ptr + 2)` is 16
+
+b.
+the value of `*ptr` is 12
+
+the value of `*(ptr + 2)` is 14

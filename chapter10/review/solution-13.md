@@ -8,3 +8,5 @@ a. Show a function call that passes a compound literal containing the values 8, 
 and 2 to the `show()` function.
 
 b. Show a function call that passes a compound literal containing the values 8, 3, and 9 as the first row and the values 5, 4, and 1 as the second row to the `show2()` function.
+
+# Solution

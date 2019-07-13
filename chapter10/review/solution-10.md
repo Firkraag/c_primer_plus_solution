@@ -23,3 +23,19 @@ g. `pf = value;`
 h. `pf = rootbeer;`
 
 # Solution
+a. valid
+
+b. invalid
+
+c. invalid
+
+d. invalid
+
+e. valid
+
+f. 
+
+g. invalid
+
+h. valid
+
