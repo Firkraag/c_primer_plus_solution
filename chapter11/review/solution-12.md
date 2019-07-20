@@ -5,14 +5,13 @@ Design a function that takes a string pointer as an argument and returns a point
 ```
 char *find_space(char *string)
 {
-    char *pos = string;
-    while (*pos)
+    while (*string)
     {
-        if (isspace(*pos))
-            return pos;
+        if (isspace(*string))
+            return string;
         else
-            pos++;
+            string++;
     }
-    return null;
+    return NULL;
 }
 ```
