@@ -26,6 +26,7 @@ int main(void) {
     } while (read_char_number >= 0); 
 
 }
+// `array` is a char array of size at least n + 1
 int get_next_n_chars(char *array, int n)
 {
     for (int i = 0;i < n;i++)
@@ -36,7 +37,6 @@ int get_next_n_chars(char *array, int n)
             array[i] = '\0';
             return EOF;
         }
-        :qa
 
         else if (isspace(c))
         {
