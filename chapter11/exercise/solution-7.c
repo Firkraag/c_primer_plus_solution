@@ -16,7 +16,7 @@
 int main(void) {
     char *mystrncpy(char *, const char *, int);
     char source[SIZE];
-    char dest[SIZE];
+    char dest[10];
     
     while (printf("Please enter a line:\n"),fgets(source, SIZE, stdin))
     {
