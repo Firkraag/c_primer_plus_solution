@@ -6,7 +6,7 @@
  ************************************************************************/
 
 #include <stdio.h>
-#include <iso646.h>
+#include <iso646.hgit@github.com:Firkraag/c_primer_plus_solution.git>
 #define SIZE 1000
 
 
