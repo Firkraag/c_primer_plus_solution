@@ -140,7 +140,7 @@ void print_menu(void)
 int input_strings(int string_number, int string_size, char strings[string_number][string_size])
 {
     int i;
-    printf("Please enter up to %d lines, using EOF to indicate end of input:\n", STRING_NUMBER);
+    printf("Please enter up to %d lines, using EOF to indicate end of input:\n", string_number);
     for (i = 0;i < string_number;i++) 
     { 
         if (!fgets(strings[i], string_size, stdin))
