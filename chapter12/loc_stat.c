@@ -25,11 +25,14 @@ void trystat(void)
 {
     int fade = 1;
     static int stay = 1;
+    int *ptr;
 
     {
         static int stay = 100;
         printf("stay = %d\n", stay++);
+        ptr = &stay;
     }
 
     printf("fade = %d and stay = %d\n", fade++, stay++);
+    printf("%d\n", *ptr);
 }
