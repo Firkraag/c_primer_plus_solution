@@ -14,3 +14,7 @@ int main(void) {
 ```
 
 # Solution
+- Return type of `fopen` is `FILE *`.
+- `fopen` receives two arguments, the first one is of type `const char *filename`, the second one is of type `const char *mode`
+- `fputs` receives two arguments, the first one is of type `const char *str`, the second one is of type `FILE          *stream`
+- `fclose` receives one argument of type `FILE *`

@@ -20,3 +20,4 @@ int main(int argc, char *argv[]) {
 
 ```
 # Solution
+Output only digit characters from file specifed as first argument of command line.
