@@ -13,7 +13,7 @@ char * s_gets(char * st, int n)
     if (ret_val)
     {
         char *pos = strchr(st,  '\n');
-        if (*pos)
+        if (pos)
             *pos = '\0';
         else // must have words[i] == '\0'
             while (getchar() != '\n')

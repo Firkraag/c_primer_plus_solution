@@ -26,3 +26,7 @@ int main(void)
 ```
 
 # Solution
+```
+faavrhee
+*le*on*sm
+```

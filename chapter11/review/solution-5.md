@@ -58,7 +58,17 @@ e.
 `Ho Ho Ho!!oH oH o`
 
 f.
+
 The first loop iterates from start of string to null terminator.
 
 The second loop iterates from the end of string(null terminator) back to the start of string.
 
+g.
+
+segment fault 
+
+`*pc` at first loop will dereference the value at address 0, causing a segment fault.
+
+h.
+
+`pr()` must be declared in the calling program

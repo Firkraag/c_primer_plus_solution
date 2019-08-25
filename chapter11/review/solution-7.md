@@ -20,7 +20,7 @@ int main(void)
     words[4] = '\0'; 
     puts(words); 
     while (*M3)
-    puts(M3++); 
+        puts(M3++); 
     puts(--M3);
     puts(--M3); 
     M3 = M1; 
@@ -28,4 +28,20 @@ int main(void)
     
     return 0;
 }
+```
+
+# Solution
+```
+How are ya, sweetie? How are ya, sweetie? 
+Beat the clock.
+eat the clock.
+Beat the clock.  Win a toy.
+Beat
+chat
+hat
+at
+t
+t
+at
+How are ya, sweetie? 
 ```

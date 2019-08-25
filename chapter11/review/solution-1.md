@@ -5,3 +5,5 @@ int main(void) {
     char name[] = {'F', 'e', 's', 's' };
 }
 ```
+# Solution
+have no terminating '\0' character.
