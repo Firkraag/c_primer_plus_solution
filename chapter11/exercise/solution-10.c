@@ -31,7 +31,7 @@ void strip(char *string)
 {
     char ch;
     char *pos = string;
-    while (ch = *string++)
+    while ((ch = *string++))
     {
         if (!isspace(ch))
             *pos++ = ch;

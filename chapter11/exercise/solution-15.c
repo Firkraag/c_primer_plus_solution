@@ -10,7 +10,7 @@
 #include <ctype.h>
 #define SIZE 1000
 int atoi(const char *) ;
-int _atoi(const char *, int) ;
+/*int _atoi(const char *, int) ;*/
 /* Use the character classification functions to prepare an implementation of atoi(); 
  * have this version return the value of 0 if the input string is not a pure number.
  */
@@ -18,7 +18,7 @@ int _atoi(const char *, int) ;
 int main(void) {
     char string[SIZE];
 
-    while (scanf("%s", string) == 1)
+    while (printf("Please enter a word: "),scanf("%s", string) == 1)
     {
         printf("the result of atoi(\"%s\") is %d\n", string, atoi(string));
     } 
@@ -26,17 +26,30 @@ int main(void) {
 
 int atoi(const char *string)
 {
-    return _atoi(string, 0);
+    int result = 0;
+    while (*string)
+    {
+        if (!isdigit(*string))
+        {
+            return 0;
+        }
+        else
+        {
+            result = (*string++ - '0') + result * 10;
+        }
+    } 
+    return result;
+    /*return _atoi(string, 0);*/
 }
 
-int _atoi(const char *string, int result)
-{
-    if (!*string)
-        return result;
-    if (!isdigit(*string))
-    {
-        return 0;
-    }
-    return _atoi(string + 1, result * 10 + (*string - '0'));
-}
+/*int _atoi(const char *string, int result)*/
+/*{*/
+    /*if (!*string)*/
+        /*return result;*/
+    /*if (!isdigit(*string))*/
+    /*{*/
+        /*return 0;*/
+    /*}*/
+    /*return _atoi(string + 1, result * 10 + (*string - '0'));*/
+/*}*/
 

@@ -22,11 +22,11 @@ int main (int argc, char *argv[])
     int power;
     if (argc != 3)
     {
-        printf("The commmand format is: %s DOUBLE INTEGER_POWER\n", argv[0]);
+        printf("The commmand format is: %s NUMBER INTEGER_POWER\n", argv[0]);
         return 1;
     }
     sscanf(argv[1], "%lf", &number);
     sscanf(argv[2], "%d", &power);
     printf("%f raised to power %d is %f\n", number, power, pow(number, power));
     return 0;
-
+}
