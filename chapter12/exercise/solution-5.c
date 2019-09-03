@@ -21,12 +21,12 @@ int main(void) {
 
    srand(time(0)); //use current time as seed for random generator
 
-   for (int i = 0;i < 100;i++)
+   for (int i = 0;i < SIZE;i++)
    {
        numbers[i] = random_number();
    }
-   qsort((void *) numbers, 100, sizeof(int), comp);
-   for (int i = 0;i < 100;i++)
+   qsort((void *) numbers, SIZE, sizeof(int), comp);
+   for (int i = 0;i < SIZE;i++)
    {
        printf("%d\n", numbers[i]);
    }

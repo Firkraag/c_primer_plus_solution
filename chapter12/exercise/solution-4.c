@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 #include <iso646.h>
-
+// Write and test in a loop a function that returns the number of times it has been called. 
 int main(void) {
     int call_count(void);
     for (int i = 0;i < 10;i++)
