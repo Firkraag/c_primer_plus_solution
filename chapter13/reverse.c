@@ -29,13 +29,14 @@ int main(void) {
     }
     fseek(fp, 0L, SEEK_END);
     last = ftell(fp);
-    for (count = 1L;count <= last;count++)
+    for (count = 0L;count <= last;count++)
     {
         fseek(fp, -count, SEEK_END);
         ch = getc(fp);
         if (ch != CNTL_Z && ch != '\r')
         {
-            putchar(ch);
+//            putchar(ch);
+            printf("char: %c\t", ch);
         }
     }
     putchar('\n');

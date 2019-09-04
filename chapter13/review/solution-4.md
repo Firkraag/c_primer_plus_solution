@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
     }
     else if (argc == 2)
     {
-        fp = fopen("num.dat", "r");
+        fp = fopen(argv[1], "r");
     }
     while (fscanf(fp, "%lf", &number) == 1)
     {
