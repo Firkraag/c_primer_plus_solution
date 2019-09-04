@@ -26,6 +26,7 @@ void root()
 }
 ```
 # Solution
-`main` in file 1,  `stem` and `root` in file2 know each variables.
-
-But `petal` does not know `lily` declared in the function body.
+`main` knows `daisy` and `lily` defined locally. 
+`stem` knows `rose` defined locally and `lily` defined globally and `daisy` defined in file1.
+`root` knows `rose` and `lily` defined globally and `daisy` defined in file`.
+`petal` knows `daisy` defined globally. But `petal` does not know `lily` declared in the function body since `lily` in file 2 has internal linkage.
