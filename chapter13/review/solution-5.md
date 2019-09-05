@@ -21,7 +21,8 @@ int main(int argc, char *argv[]) {
         {
             printf("%s", string);
         }
-    } 
+    }
+    fclose(fp); 
     return 0;
 }
 ```

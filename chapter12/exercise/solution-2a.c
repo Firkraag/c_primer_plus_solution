@@ -12,7 +12,7 @@ static int mode;
 static double distance;
 static double fuel_consumed;
 
-void set_mode(int mode_)
+void set_mode(const int mode_)
 {
     extern int mode;
     assert(mode_ >= 0);

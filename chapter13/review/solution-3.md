@@ -1,3 +1,4 @@
+
 # Problem
 Suppose you have these statements in a program:
 ```

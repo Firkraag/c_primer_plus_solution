@@ -27,7 +27,7 @@ int main(void)
     int sets;
     int sides;
     int status;
-    srand((unsigned int) time(0)); /* randomize seed */ 
+    srand((unsigned int) time(NULL)); /* randomize seed */ 
     printf("Enter the number of sets; enter q to stop.\n"); 
     while (scanf("%d", &sets) == 1)
     {

@@ -13,7 +13,7 @@
 #define SIZE 10
 #define TIMES 1000
 
-/* Write a program that generates 1,000 random numbers in the range 1–10. 
+/* Write a program that generates 1000 random numbers in the range 1–10. 
  * Don’t save or print the numbers, but do print how many times each number was produced. 
  * Have the program do this for 10 different seed values. Do the numbers appear in equal amounts? 
  * You can use the functions from this chapter or the ANSI C rand() and srand() functions, which follow the same format that our functions do. 
@@ -45,7 +45,7 @@ int main(void) {
            printf("%d: %d times\t", j + 1, numbers[j]);
        }
        printf("\n");
-       /*sleep(1);*/
+       sleep(1);
    }
 
 }

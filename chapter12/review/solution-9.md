@@ -11,6 +11,7 @@ enhance the protection of values in the calling program?
 
 # Solution
 a.
-variable `plink` cannot be used in other source file, the value dereferenced by `arr` cannot be altered by pointer `arr`
+variable `plink` cannot be used in other source files, `arr` points to array of integers, and the program will not be allowed to use `arr` to alter the values in the array. 
 
-b. `const int value` and `const int n` enhance the protection of values in the called function.
+b. `const int value` and `const int n` enhance the protection of values in the called function, but not in the calling program.
+

@@ -5,10 +5,10 @@
 	> Created Time: Mon Jul 29 15:07:34 2019
  ************************************************************************/
 
-// pe12-2b.c
-// compile with pe12-2a.c
+// solution-2b.c
+// compiled with solution-2a.c
 #include <stdio.h> 
-#include "pe12-2a.h"
+#include "solution-2a.h"
 /* Gasoline consumption commonly is computed in miles per gallon in the U.S. and in liters per 100 kilometers in Europe. 
  * What follows is part of a program that asks the user to choose a mode (metric or U.S.) and then gathers data and computes fuel consumption:
  * // pe12-2b.c

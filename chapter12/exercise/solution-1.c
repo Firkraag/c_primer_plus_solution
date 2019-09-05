@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 #include <iso646.h>
-void critic(int);
+void critic(int *);
 
 /* Rewrite the program in Listing 12.4 so that it does not use global variables.
  */
@@ -18,15 +18,15 @@ int main(void) {
     scanf("%d", &units);
     while (units != 56 )
     {
-        critic(units);
+        critic(&units);
     } 
     printf("You must have looked it up!\n");
 
     return 0;
 }
 
-void critic(int units)
+void critic(int *units_ptr)
 {
     printf("No luck, my friend. Try again.\n");
-    scanf("%d", &units);
+    scanf("%d", units_ptr);
 }

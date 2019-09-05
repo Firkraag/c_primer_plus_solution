@@ -35,16 +35,16 @@
  *  return  0; 
  * }
  *
- * Complete the program by providing function definitions for make_array() and show_ array(). 
+ * Complete the program by providing function definitions for make_array() and show_array(). 
  * The make_array() function takes two arguments. 
- * The first is the number * of elements of an int array, and the second is a value that is to be assigned to each element. 
+ * The first is the number of elements of an int array, and the second is a value that is to be assigned to each element. 
  * The function uses malloc() to create an array of a suitable size, sets each element to the indicated value, 
  * and returns a pointer to the array. The show_array() function displays the contents, eight numbers to a line.
  */
 int main(void)
 {
     int *make_array(int size, int value);
-    void show_array(int *array, int size);
+    void show_array(const int *array, int size);
     int *pa; 
     int size; 
     int value;
@@ -64,13 +64,14 @@ int main(void)
     return  0; 
 }
  
-void show_array(int *array, int size)
+void show_array(const int *array, int size)
 {
 
     for (int i = 0;i < size;i++)
     {
         printf("%d%c", array[i], (i + 1) % 9 ? '\t':'\n');
     }
+
 }
 
 int *make_array(int size, int value)
