@@ -20,4 +20,8 @@ int main(void)
     return 0;
 }
 ```
-#Solution
+# Solution
+```
+6 1
+22 Spiffo Road 
+S p

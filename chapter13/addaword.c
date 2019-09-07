@@ -20,7 +20,7 @@ int main(void) {
 
     if ((fp = fopen("wordy", "a+")) == NULL)
     {
-        fprintf(stdout, "Can't open \"word\" file.\n");
+        fprintf(stdout, "Can't open \"wordy\" file.\n");
         exit(EXIT_FAILURE);
     }
     puts("Enter words to add to the file; press the #");
@@ -36,7 +36,7 @@ int main(void) {
         puts(words);
     } 
     puts("Done!");
-    if (fclose(fp) != 1)
+    if (fclose(fp) != 0)
     {
         fprintf(stderr, "Error closing file\n");
     }

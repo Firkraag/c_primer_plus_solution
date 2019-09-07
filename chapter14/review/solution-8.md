@@ -15,24 +15,47 @@ struct bard willie;
 struct bard *pt = &willie;
 ```
 
-a. Identify the born member of the willie structure using the willie identifier.
+a. Identify the `born` member of the `willie` structure using the `willie` identifier.
 
-b. Identify the born member of the willie structure using the pt identifier.
+b. Identify the `born` member of the `willie` structure using the `pt` identifier.
 
-c. Use a scanf() call to read in a value for the born member using the willie
+c. Use a `scanf()` call to read in a value for the `born` member using the `willie`
 identifier.
 
-d. Use a scanf() call to read in a value for the born member using the pt identifier.
+d. Use a `scanf()` call to read in a value for the `born` member using the `pt` identifier.
 
-e. Use a scanf() call to read in a value for the lname member of the name member
-using the willie identifier.
+e. Use a `scanf()` call to read in a value for the `lname` member of the `name` member
+using the `willie` identifier.
 
-f. Use a scanf() call to read in a value for the lname member of the name member
-using the pt identifier.Programming Exercises
+f. Use a `scanf()` call to read in a value for the `lname` member of the `name` member
+using the `pt` identifier.
 
 g. Construct an identifier for the third letter of the first name of someone described
-by the willie variable.
+by the `willie` variable.
 
 h. Construct an expression representing the total number of letters in the first and
-last names of someone described by the willie variable.
+last names of someone described by the `willie` variable.
 # Solution
+a.
+`willie.born`
+
+b.
+`pt->born`
+
+c.
+`scanf("%d", &willie.born)`
+
+d.
+`scanf("%d", &pt->born)`
+
+e.
+`scanf("%s", willie.name.lname)`
+
+f.
+`scanf("%s", pt->name.lname)`
+
+g.
+`willie.name.fname[2]`
+
+h.
+`strlen(willie.name.fname) + strlen(willie.name.lname)`

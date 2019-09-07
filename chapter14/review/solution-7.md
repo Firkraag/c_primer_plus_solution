@@ -34,3 +34,26 @@ structure template is in a file called starfolk.h ):
 
 `Berbnazel Gwolkapwolk is a 6-limbed Arcturan.`
 # Solution
+a.
+
+```
+6
+Arcturan
+cturan
+```
+
+b.
+
+```
+deb.title.last
+pb->title.last
+```
+
+c.
+
+```
+void print_bem(const struct bem *pb)
+{
+    printf("%s %s is a %d-limbed %s\n", pb->title.first, pb->title.last, pb->limbs, pb->type);
+}
+```

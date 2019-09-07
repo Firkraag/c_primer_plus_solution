@@ -8,3 +8,6 @@ structure {
 }
 ```
 # Solution
+* `struct` is the keyword used to declare structure, not `structure`.
+
+* missing `;` after right parenthesis.
