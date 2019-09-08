@@ -17,53 +17,55 @@
 #include <iso646.h>
 #include <string.h>
 #include <stdlib.h>
-
-char *s_gets(char *st, int n);
-char showmenu(void);
 #define MAXTITL 41
 #define MAXAUTL 31
 #define MAXBKS 10
+
 struct book {
     char title[MAXTITL];
     char author[MAXAUTL];
     float value;
 };
+char *s_gets(char *st, int n);
+char showmenu(void);
+void modify_book(struct book *);
 int main(void) {
     struct book library[MAXBKS];
     int count = 0;
-    int index, filecount;
+    int index = 0, filecount;
     FILE *pbooks;
     int size = sizeof(struct book);
-    if ((pbooks = fopen("book.dat", "a+b")) == NULL)
+    if ((pbooks = fopen("book.dat", "r")) == NULL)
     {
         fputs("Can't open book.dat file\n.", stderr);
         exit(EXIT_FAILURE);
     }
-    rewind(pbooks);
-    while (count < MAXBKS and fread(&library[count], size,  1, pbooks) == 1)
+    while (index < MAXBKS and fread(&library[index], size,  1, pbooks) == 1)
     {
-        if (count == 0)
+        if (index == 0)
         {
             puts("Current contents of book.dat:");
         }
-        printf("%s by %s: $%.2f\n", library[count].title, library[count].author, library[count].value);
+        printf("%s by %s: $%.2f\n", library[index].title, library[index].author, library[index].value);
         switch (showmenu())
         {
             case 'n': /* do nothing */
-                count++;
+                library[count++] = library[index];
                 break;
             case 'm':
-
+                modify_book(&library[count++]);
                 break;
             case 'd':
+                printf("The record deleted.\n");
                 break;
             default:
                 fprintf(stderr, "Invalid choice , please enter 'n' to do nothing, 'm' to modify the record, 'd' to delete the record");
                 exit(EXIT_FAILURE);
                 break;
         } 
+        index++;
     } 
-    filecount = count;
+    fclose(pbooks);
     if (count == MAXBKS)
     {
         fputs("The book.dat file is full.\n", stderr);
@@ -93,17 +95,42 @@ int main(void) {
         {
             printf("%s by %s: $%.2f\n", library[index].title, library[index].author, library[index].value);
         }
-        fwrite(&library[filecount], size, count - filecount, pbooks);
+        rewind(pbooks);
+        pbooks = fopen("book.dat", "w");
+        fwrite(&library, size, count, pbooks);
+        fclose(pbooks);
     }
     else
     {
         puts("No books? Too bad.\n");
     }
     puts("Bye.\n");
-    fclose(pbooks);
     return 0;
 }
 
+char showmenu(void)
+{
+    char temp[20];
+    printf("What do you want to do with this record?\n");
+    printf("m) modify the record        d) delete the record\n");
+    printf("n) do nothing\n");
+    scanf("%s", temp);
+    while (getchar() != '\n')
+    {
+        continue;
+    }
+    return temp[0];
+}
+
+void modify_book(struct book *ptr)
+{
+    printf("Please enter title, author and value\n"); 
+    scanf("%s %s %f", ptr->title, ptr->author, &ptr->value);
+    while (getchar() != '\n')
+    {
+        continue;
+    }
+}
 char * s_gets(char * st, int n) {
     char * ret_val; 
     char * find;
