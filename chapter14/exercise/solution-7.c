@@ -27,8 +27,8 @@ struct book {
     float value;
 };
 char *s_gets(char *st, int n);
-char showmenu(void);
-void modify_book(struct book *);
+int showmenu(void);
+int fill_book(struct book *);
 int main(void) {
     struct book library[MAXBKS];
     int count = 0;
@@ -53,7 +53,7 @@ int main(void) {
                 library[count++] = library[index];
                 break;
             case 'm':
-                modify_book(&library[count++]);
+                fill_book(&library[count++]);
                 break;
             case 'd':
                 printf("The record deleted.\n");
@@ -71,22 +71,11 @@ int main(void) {
         fputs("The book.dat file is full.\n", stderr);
         exit(2);
     }
-    puts("Please add new book titles.");
-    puts("Press [enter] at the start of a line to stop.");
-    while (count < MAXBKS && s_gets(library[count].title, MAXTITL) != NULL && library[count].title[0] != '\0')
+    puts("Now enter a list of new book infos");
+    puts("Press [enter] when entering book title to stop.");
+    while (count < MAXBKS && fill_book(&library[count]))
     {
-        puts("Now enter the author.");
-        s_gets(library[count].author, MAXAUTL);
-        puts("Now enter the value.");
-        scanf("%f", &library[count++].value);
-        while (getchar() != '\n' )
-        {
-            continue;
-        } 
-        if (count < MAXBKS)
-        {
-            puts("Enter the next title.");
-        }
+        count++;
     } 
     if (count > 0)
     {
@@ -108,28 +97,45 @@ int main(void) {
     return 0;
 }
 
-char showmenu(void)
+int showmenu(void)
 {
-    char temp[20];
+    int get_first(void);
     printf("What do you want to do with this record?\n");
     printf("m) modify the record        d) delete the record\n");
     printf("n) do nothing\n");
-    scanf("%s", temp);
-    while (getchar() != '\n')
-    {
-        continue;
-    }
-    return temp[0];
+    return get_first();
 }
 
-void modify_book(struct book *ptr)
+/* get first character of a fine and discard the rest, including newline character
+ */
+int get_first(void) {
+    int result = getchar();
+    int c = result;
+    while (c != '\n' && c != EOF )
+    {
+        c = getchar();
+    } 
+    return result;
+}
+/* return value 1 means continuing entering book info,
+ * return value 0 means entering book info stopped.
+ */
+int fill_book(struct book *ptr)
 {
-    printf("Please enter title, author and value\n"); 
-    scanf("%s %s %f", ptr->title, ptr->author, &ptr->value);
-    while (getchar() != '\n')
+    puts("Please enter the title.");
+    if (s_gets(ptr->title, MAXTITL) == NULL || ptr->title[0] == '\0')
+    {
+        return 0;
+    }
+    puts("now enter the author.");
+    s_gets(ptr->author, MAXAUTL);
+    puts("now enter the value.");
+    scanf("%f", &ptr->value);
+    while (getchar() != '\n' )
     {
         continue;
-    }
+    } 
+    return 1;
 }
 char * s_gets(char * st, int n) {
     char * ret_val; 
