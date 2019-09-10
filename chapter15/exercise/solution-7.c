@@ -30,13 +30,26 @@
 #define UNDERLINE_MASK 0x400000
 #define UNDERLINE_ON 0x400000
 #define UNDERLINE_OFF 0
+/* The layout of all bits in unsigned long variable is like following:
+ * 0-7 bits represent id,
+ * 8-14 bits represent size;
+ * 15 bit unused,
+ * 16-17 bits represent alignment,
+ * 18-19 bits unused,
+ * 20 bit represnet bold
+ * 21 bit represent italic
+ * 22 bit represent underline
+ */
 struct font_info {
     unsigned id             : 8;
     unsigned size           : 7;
+    unsigned                : 1;
     unsigned alignment      : 2;
+    unsigned                : 2; 
     bool bold               : 1;
     bool italic             : 1;
     bool underline          : 1;
+    unsigned                : 1;
 };
 void show_font_info(const unsigned long);
 void show_menu(void);
@@ -49,7 +62,8 @@ void toggle_bold(unsigned long *);
 void toggle_italic(unsigned long *);
 void toggle_underline(unsigned long *);
 int main(void) {
-    unsigned long font = 0x000c01;
+    unsigned long font = 0x000c01; /* id = 1, size = 12, alignment = left, bold = off, italic = off, underline = off */
+
     int choice;
     while (show_font_info(font),show_menu(), (choice = get_choice()) != 'q')
     {

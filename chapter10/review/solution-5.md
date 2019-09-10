@@ -17,4 +17,9 @@ ptr = fort;
 
 # Solution
 a.
-the value of `**ptr` and of `**(ptr + 1)` is 
+
+12 and 16
+
+b.
+
+12 and 14

@@ -8,6 +8,6 @@ int strlen(const char *string)
     char *ptr = string;
     while (*ptr++ != '\0')
         ;
-c    return ptr - string - 1;
+    return ptr - string - 1;
 }
 ```

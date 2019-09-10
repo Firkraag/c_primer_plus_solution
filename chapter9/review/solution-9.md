@@ -67,6 +67,7 @@ int main(void)
             case default:
                 ;
         }
+        display_menu();
     }
 }
 ```

@@ -25,17 +25,17 @@ h. `pf = rootbeer;`
 # Solution
 a. valid
 
-b. invalid
+b. invalid; `rootbeer` is not a `float`
 
-c. invalid
+c. invalid; `rootbeer` is a constant
 
-d. invalid
+d. invalid; `rootbeer` is not a `float`
 
 e. valid
 
-f. 
+f. invalid; cannot assign arrays
 
-g. invalid
+g. invalid; value is not address
 
 h. valid
 
