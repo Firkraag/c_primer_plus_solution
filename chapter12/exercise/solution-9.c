@@ -33,6 +33,11 @@ int main(void) {
     {
         printf("%s\n", words_array[i]);
     }
+    for (int i = 0;i < words_number;i++)
+    {
+        free(words_array[i]);
+    }
+    free(words_array);
     
     return 0;
 }
