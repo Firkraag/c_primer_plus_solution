@@ -1,5 +1,6 @@
 # Problem
-Evaluate the following expressions; assume each value is 8 bits: 
+Evaluate the following expressions; assume each value is 8 bits:
+ 
 a. ~3
 
 b. 3 & 6 
@@ -15,7 +16,7 @@ f. 7 >> 1
 g. 7 << 2
 
 # Solution
-a. -3
+a. -4
 
 b. 2
 

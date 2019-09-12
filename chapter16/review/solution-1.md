@@ -1,4 +1,4 @@
-#Problem
+# Problem
 Here are groups of one or more macros followed by a source code line that uses them.
 What code results in each case? Is it valid code? (Assume C variables have been declared.)
 
@@ -34,7 +34,7 @@ est = NEW(berg) / NEW(y);
 nilp = lob * NEW(-berg);
 ```
 
-#Solution
+# Solution
 a.
 ```
 dist = 5280 * miles;

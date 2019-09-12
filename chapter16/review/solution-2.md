@@ -1,6 +1,7 @@
-#Problem
+# Problem
 Fix the definition in part d of question 1 to make it more reliable.
-#Solution
+
+# Solution
 ```
 #define NEW(X) ((X) + 5)
 y = NEW(y);
