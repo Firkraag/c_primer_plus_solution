@@ -3,7 +3,7 @@ Design a function that takes a string pointer as an argument and returns a point
 
 # Solution
 ```
-char *find_space(char *string)
+char *find_space(const char *string)
 {
     while (*string)
     {

@@ -9,4 +9,4 @@ void salami(num) {
 ```
 
 # Solution
-formal parameter `num` has no type.
+Formal parameter `num` has no type.
