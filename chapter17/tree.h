@@ -8,12 +8,14 @@
 #ifndef TREE_H_
 #define TREE_H_
 #include <stdbool.h>
+#include <string.h>
 #define MAXITEMS 10
+#define SLEN 20
 //typedef int Item;
 typedef struct 
 {
-    char petname[20];
-    char petkind[20];
+    char petname[SLEN];
+    char petkind[SLEN];
 } Item;
 typedef struct trnode
 {
