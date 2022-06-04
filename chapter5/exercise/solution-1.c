@@ -12,7 +12,7 @@
 int main(void) {
     int minutes;
 
-    while (printf("Please enter minutes:\n"),scanf("%d", &minutes) > 0) {
+    while (printf("Please enter minutes: "),scanf("%d", &minutes), minutes > 0) {
         printf("hours = %d and minutes = %d\n", minutes / MINUTE_PER_HOUR, minutes % MINUTE_PER_HOUR);
     }
     printf("exit\n");
