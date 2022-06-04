@@ -22,7 +22,7 @@ Type Operations: Initialize stack to empty.
 
 b.
 
-```
+```c
 #ifndef STACK_H_
 #define STACK_H_
 #include <stdbool.h>
@@ -38,7 +38,7 @@ typedef struct
 typedef struct node
 {
     Item item;
-    struct node *next;
+    struct node *prev;
 } Node;
 
 typedef struct 
